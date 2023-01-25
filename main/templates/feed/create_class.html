@@ -1,0 +1,11 @@
+{% extends "feed/base.html" %}
+{% block title %} Привет {% endblock title %}
+
+
+{% block content %}
+    <form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input class="bg-indigo-500 text-white py-2 px-4 rounded-lg hover:bg-indigo-600" type="submit" value=Создать>
+</form>
+{% endblock content %}
